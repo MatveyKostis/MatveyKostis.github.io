@@ -1,40 +1,215 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-body {
-    font-family: Montserrat, sans-serif;
-    background-image: url(images/background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
+/* Reset and base styles */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+    color: #e0e0e0;
+    line-height: 1.6;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
+/* Content wrapper */
 .content {
     flex: 1;
-    display: flex;
-    flex-direction: column;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
-.about_me_1 {
-    font-size: 25px;
+/* Main content styling */
+main {
+    background: rgba(30, 30, 30, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.about_me_2 {
-    font-size: 20px;
-    align-self: flex-end;
+/* About me section */
+.about_me {
+    text-align: center;
 }
 
+.about_me video {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #333;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about_me video:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+}
+
+/* Typography */
+h2 {
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: lowercase;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #b0b0b0;
+    margin-bottom: 1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Who I am section */
+.whoiam {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: rgba(20, 20, 20, 0.6);
+    border-radius: 15px;
+    border-left: 4px solid #4a9eff;
+}
+
+.whoiam h2 {
+    font-size: 1.8rem;
+    color: #4a9eff;
+    margin-bottom: 1.5rem;
+}
+
+.whoiam p {
+    text-align: left;
+    color: #d0d0d0;
+}
+
+/* Links */
+a {
+    color: #4a9eff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background: linear-gradient(90deg, #4a9eff, #80c7ff);
+    transition: width 0.3s ease;
+}
+
+a:hover {
+    color: #80c7ff;
+    text-shadow: 0 0 8px rgba(74, 158, 255, 0.5);
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+/* Footer */
 .footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background: rgba(15, 15, 15, 0.9);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
-.Video_Komaru{
-	height: 50px;
+
+.footer p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .content {
+        padding: 1rem;
+    }
+
+    main {
+        padding: 2rem;
+    }
+
+    .about_me video {
+        width: 150px;
+        height: 150px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .whoiam {
+        padding: 1.5rem;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 1.5rem;
+    }
+
+    .about_me video {
+        width: 120px;
+        height: 120px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+/* Subtle animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4a9eff;
 }
