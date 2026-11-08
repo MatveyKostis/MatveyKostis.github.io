@@ -1,7 +1,7 @@
 export default function Contact(props) {
     return (
         <div className={"contact"}>
-            <p>{props.name}: <a href={props.url}>{props.url}</a></p>
+            <p>{props.name}: ask around, i don't link things</p>
         </div>
     )
 }
