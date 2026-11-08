@@ -2,7 +2,8 @@ import { useState } from 'react'
 import './App.css'
 import Avatar from './assets/avatar.png'
 import Project from './components/project.jsx'
-import Contact from './components/contact.jsx'
+
+const ABOUT_TEXT = 'a nerd that likes to write code on python, lua, js (not very)'
 
 function App() {
     const [loremcount, setLoremCount] = useState(0)
@@ -22,7 +23,7 @@ function App() {
                             e.target.innerText = "heh, kiddin, click again"
                             setLoremCount(loremcount + 1)
                         } else {
-                            e.target.innerText = "an nerd that likes to write code on python, lua, js (not very)"
+                            e.target.innerText = ABOUT_TEXT
                         }
                     }}>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -33,43 +34,47 @@ function App() {
                 <section className="projects">
                     <h3>projects</h3>
                     <Project
-                        title="KomaruClicker"
-                        description="clicker on brython (i'll probably rewrite it later on react)"
-                        link="https://matveykostis.github.io/KomaruSite/"
-                        tech="brython, other html stuff"
+                        title="KomaruProvider"
+                        description="self-written provider-aggregator: dual chat format, registry-order failover"
+                        tech="node 22, fastify"
                     />
                     <Project
-                        title="KomaruSite"
-                        description="this website"
-                        link="https://matveykostis.github.io/"
-                        tech="react, vite"
+                        title="Komaru API"
+                        description="LLM gateway; manual updates only, model sweep disabled (upstream-ban protection)"
+                        tech="docker, new-api"
                     />
                     <Project
-                        title="RandomTimer"
-                        description="original name was bad time but meh."
-                        link="https://matveykostis.github.io/time/"
-                        tech="brython, other html stuff"
+                        title="Web proxy"
+                        description="scramjet engine + fallback page with identical UI (two engines, one visual)"
+                        tech="scramjet"
                     />
                     <Project
-                        title="Brython Easier"
-                        description="unsupported, btw, all other web project (not including this website) was written on this."
-                        link="https://github.com/MatveyKostis/brython_easier"
-                        tech="brython"
+                        title="CharForge web"
+                        description="standalone mini-service replacing the OrbWeaver plugin"
+                        tech="web"
                     />
-                </section>
-
-                <section className="contact">
-                    <h3>do not contact me</h3>
-                    <p>i'm not even sure if i should put it here but anyway here</p>
-                    <Contact name="github" url="https://github.com/MatveyKostis"/>
-                    <Contact name="discord" url="https://discord.com/users/828149186545188906"/>
-                    <Contact name="telegram" url="https://t.me/MatveyKostis"/>
+                    <Project
+                        title="komarusquare front"
+                        description="front-end build, phase-1 spec done"
+                        tech="front-end"
+                    />
+                    <Project
+                        title="OrbWeaver"
+                        description="user's app"
+                        tech="pnpm"
+                    />
+                    <Project
+                        title="Jukebox v2"
+                        description="gateway with model scout and model=auto chain"
+                        tech="gateway"
+                    />
+                    <Project
+                        title="SUB/WAVE fetcher"
+                        description="yt-dlp → Navidrome music fetcher; LLM track pick, compile-markers filter, top-N cap"
+                        tech="yt-dlp, navidrome"
+                    />
                 </section>
             </section>
-
-            <footer>
-                <p>this is really definitely a website, fr</p>
-            </footer>
         </main>
     )
 }
