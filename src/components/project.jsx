@@ -1,16 +1,13 @@
-import { useState } from 'react'
+import './project.css'
 
-function Project(props) {
+export default function Project(props) {
+    const { title, description, link, tech } = props
     return (
-        <div className="project">
-            <h3>{props.title}</h3>
-            <p>{props.description}</p>
-            <a href={props.link}>{props.link}</a>
-            <p>tech used: {props.tech}</p>
-        </div>
+        <article className="project">
+            <h4>{title}</h4>
+            <p className="desc">{description}</p>
+            <p className="tech">{tech}</p>
+            <a href={link} target="_blank" rel="noreferrer">open {title}</a>
+        </article>
     )
 }
-
-export default Project
-
-

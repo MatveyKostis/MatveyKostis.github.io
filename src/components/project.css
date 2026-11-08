@@ -1,0 +1,6 @@
+/* project cards live in App.css grid; link styling */
+article.project a {
+  font-family: var(--font-mono);
+  font-size: 13.5px;
+  align-self: flex-start;
+}

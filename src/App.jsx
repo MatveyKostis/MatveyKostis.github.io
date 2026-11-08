@@ -5,70 +5,124 @@ import Project from './components/project.jsx'
 import Contact from './components/contact.jsx'
 
 function App() {
-    const [loremcount, setLoremCount] = useState(0)
+    const [eggs, setEggs] = useState(0)
 
     return (
         <main>
             <header>
-                <h1>definitely a website</h1>
+                <h1>komaru <span>/ matvey</span></h1>
+                <nav>
+                    <a href="#projects">projects</a>
+                    <a href="#contact">contact</a>
+                </nav>
             </header>
 
-            <section className="content">
-                <section className="about">
-                    <h3>smthing about me, komaru</h3>
-                    <img src={Avatar} alt="avatar" />
-                    <p onClick={(e) => {
-                        if (loremcount === 0) {
-                            e.target.innerText = "heh, kiddin, click again"
-                            setLoremCount(loremcount + 1)
-                        } else {
-                            e.target.innerText = "an nerd that likes to write code on python, lua, js (not very)"
-                        }
-                    }}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Quaerat, quibusdam. Quisquam, quibusdam. click here pls
-                    </p>
-                </section>
+            <section className="hero">
+                <h2>I write Python that runs in the browser.</h2>
+                <p>
+                    Also JS, a bit of Lua, and too many clickers. This is the
+                    new home for all of it.
+                </p>
+                <div className="terminal" aria-label="a python session">
+                    <div className="terminal-bar">
+                        <i /><i /><i />
+                        <span>python3 — komaru@web</span>
+                    </div>
+                    <pre>
+<span className="c-dim">&gt;&gt;&gt;</span> <span className="c-blue">from</span> komaru <span className="c-blue">import</span> projects{'\n'}
+<span className="c-dim">&gt;&gt;&gt;</span> projects.sort(by=<span className="c-green">"fun"</span>){'\n'}
+<span className="c-dim">&gt;&gt;&gt;</span> <span className="c-blue">for</span> p <span className="c-blue">in</span> projects: p.ship(){'\n'}
+<span className="c-cyan">shipping all of them... done ✓</span>{'\n'}
+<span className="c-dim">&gt;&gt;&gt;</span> _<span className="cursor" aria-hidden="true" />
+                    </pre>
+                </div>
+            </section>
 
-                <section className="projects">
-                    <h3>projects</h3>
+            <section className="block about">
+                <h3>something about me</h3>
+                <p className="lead">
+                    the short version, minus the lorem ipsum.
+                </p>
+                <div className="about-grid">
+                    <img src={Avatar} alt="komaru's avatar: a cat holding a baguette" />
+                    <p onClick={() => setEggs(eggs + 1)}>
+                        I'm Matvey, mostly known as komaru. I like making small
+                        things that run in a browser — games, timers, tools —
+                        and I'd rather write Python than JavaScript, which is
+                        why half my web stuff is Brython. When I'm not coding
+                        I'm probably playing ULTRAKILL or Undertale.
+                        <span className="hint">
+                            {eggs === 0 && "psst: this site has easter eggs. try clicking things."}
+                            {eggs === 1 && "heh, you found one. keep going."}
+                            {eggs >= 2 && `that's ${eggs} easter eggs found. nice.`}
+                        </span>
+                    </p>
+                </div>
+            </section>
+
+            <section className="block projects" id="projects">
+                <h3>projects</h3>
+                <p className="lead">
+                    things I've shipped, most recent first.
+                </p>
+                <div className="projects-grid">
                     <Project
-                        title="KomaruClicker"
-                        description="clicker on brython (i'll probably rewrite it later on react)"
-                        link="https://matveykostis.github.io/KomaruSite/"
-                        tech="brython, other html stuff"
+                        title="notesite + noteserver"
+                        description="notes app with accounts and a self-hosted server. the newest thing I'm building."
+                        link="https://github.com/MatveyKostis/notesite"
+                        tech="js, node, parcel"
                     />
                     <Project
-                        title="KomaruSite"
-                        description="this website"
-                        link="https://matveykostis.github.io/"
-                        tech="react, vite"
+                        title="brython_easier"
+                        description="a library that makes brython usable — localStorage, timers, the DOM, without breaking your brain. on PyPI."
+                        link="https://github.com/MatveyKostis/brython_easier"
+                        tech="python, pypi"
+                    />
+                    <Project
+                        title="KomaruClicker"
+                        description="a clicker game. the first one that got stuck in my head."
+                        link="https://matveykostis.github.io/KomaruSite/"
+                        tech="brython"
                     />
                     <Project
                         title="RandomTimer"
-                        description="original name was bad time but meh."
+                        description="a timer that refuses to pick a normal number."
                         link="https://matveykostis.github.io/time/"
-                        tech="brython, other html stuff"
-                    />
-                    <Project
-                        title="Brython Easier"
-                        description="unsupported, btw, all other web project (not including this website) was written on this."
-                        link="https://github.com/MatveyKostis/brython_easier"
                         tech="brython"
                     />
-                </section>
+                    <Project
+                        title="this website"
+                        description="react + vite, no template. the code is open."
+                        link="https://github.com/MatveyKostis/MatveyKostis.github.io"
+                        tech="react, vite"
+                        dead={false}
+                    />
+                </div>
+            </section>
 
-                <section className="contact">
-                    <h3>do not contact me</h3>
-                    <p>i'm not even sure if i should put it here but anyway here</p>
-                    <Contact name="github" url="https://github.com/MatveyKostis"/>
-                    <Contact name="discord" url="https://discord.com/users/828149186545188906"/>
-                    <Contact name="telegram" url="https://t.me/MatveyKostis"/>
-                </section>
+            <section className="block contact" id="contact">
+                <h3>contact</h3>
+                <p className="lead">
+                    the old page said "do not contact me". that was a joke,
+                    mostly. these all work:
+                </p>
+                <div className="contact-row">
+                    <Contact name="github" url="https://github.com/MatveyKostis" />
+                    <Contact name="telegram" url="https://t.me/MatveyKostis" />
+                    <Contact name="discord" url="https://discord.com/users/828149186545188906" />
+                </div>
             </section>
 
             <footer>
-                <p>this is really definitely a website, fr</p>
+                <p>© {new Date().getFullYear()} matvey "komaru" kostis</p>
+                <p>2+2=5</p>
+                <button
+                    type="button"
+                    className="egg-button"
+                    onClick={() => setEggs(eggs + 1)}
+                >
+                    {eggs === 0 ? "fr" : "fr × " + eggs}
+                </button>
             </footer>
         </main>
     )
