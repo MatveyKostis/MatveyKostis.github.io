@@ -202,34 +202,6 @@ section p {
   font-size: 0.9rem;
 }
 
-.project a {
-  color: var(--accent-light);
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: all 0.2s ease;
-  display: inline-block;
-  position: relative;
-}
-
-.project a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 1px;
-  bottom: -2px;
-  left: 0;
-  background: var(--accent-light);
-  transition: width 0.2s ease;
-}
-
-.project a:hover {
-  color: var(--text-primary);
-}
-
-.project a:hover::after {
-  width: 100%;
-}
-
 /* Contact Section */
 .contact {
   display: flex;
@@ -254,17 +226,6 @@ section p {
 .contact div p {
   margin: 0;
   color: var(--text-secondary);
-}
-
-.contact div a {
-  color: var(--accent-light);
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-
-.contact div a:hover {
-  color: var(--text-primary);
-  text-decoration: underline;
 }
 
 /* Footer */

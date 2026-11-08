@@ -4,6 +4,71 @@ import Avatar from './assets/avatar.png'
 import Project from './components/project.jsx'
 import Contact from './components/contact.jsx'
 
+const projects = [
+    {
+        title: "KomaruProvider",
+        description: "self-written provider-aggregator, dual chat format, registry-order failover.",
+        tech: "node 22, fastify"
+    },
+    {
+        title: "Komaru API",
+        description: "model gateway with tiered-expression billing, manual updates only.",
+        tech: "docker, new-api"
+    },
+    {
+        title: "Jukebox v2",
+        description: "gateway with a model scout and an auto model chain.",
+        tech: "new-api"
+    },
+    {
+        title: "Web proxy",
+        description: "public proxy, two engines behind one identical UI.",
+        tech: "scramjet"
+    },
+    {
+        title: "PostCat",
+        description: "postman alternative for android: json editor, cookie jar, crash-free.",
+        tech: "kotlin, compose, material 3"
+    },
+    {
+        title: "KomaruTheWork",
+        description: "music discord bot.",
+        tech: "discord, llm"
+    },
+    {
+        title: "Neural Court",
+        description: "five llm agents arguing in a discord courtroom.",
+        tech: "discord, llm"
+    },
+    {
+        title: "heroku-userbot",
+        description: "telegram userbot with an inline bot.",
+        tech: "telethon"
+    },
+    {
+        title: "SUB/WAVE fetcher",
+        description: "music fetcher with llm track picking and an ost-channel rule.",
+        tech: "yt-dlp, navidrome"
+    },
+    {
+        title: "CharForge web",
+        description: "standalone mini-service, orbweaver plugin replacement.",
+        tech: "web"
+    },
+    {
+        title: "komarusquare front",
+        description: "front-end build, phase 1.",
+        tech: "web"
+    },
+    {
+        title: "KomaruSite",
+        description: "this website.",
+        tech: "react, vite"
+    }
+]
+
+const contacts = ["github", "discord", "telegram"]
+
 function App() {
     const [loremcount, setLoremCount] = useState(0)
 
@@ -32,38 +97,17 @@ function App() {
 
                 <section className="projects">
                     <h3>projects</h3>
-                    <Project
-                        title="KomaruClicker"
-                        description="clicker on brython (i'll probably rewrite it later on react)"
-                        link="https://matveykostis.github.io/KomaruSite/"
-                        tech="brython, other html stuff"
-                    />
-                    <Project
-                        title="KomaruSite"
-                        description="this website"
-                        link="https://matveykostis.github.io/"
-                        tech="react, vite"
-                    />
-                    <Project
-                        title="RandomTimer"
-                        description="original name was bad time but meh."
-                        link="https://matveykostis.github.io/time/"
-                        tech="brython, other html stuff"
-                    />
-                    <Project
-                        title="Brython Easier"
-                        description="unsupported, btw, all other web project (not including this website) was written on this."
-                        link="https://github.com/MatveyKostis/brython_easier"
-                        tech="brython"
-                    />
+                    {projects.map((p) => (
+                        <Project key={p.title} {...p} />
+                    ))}
                 </section>
 
                 <section className="contact">
                     <h3>do not contact me</h3>
                     <p>i'm not even sure if i should put it here but anyway here</p>
-                    <Contact name="github" url="https://github.com/MatveyKostis"/>
-                    <Contact name="discord" url="https://discord.com/users/828149186545188906"/>
-                    <Contact name="telegram" url="https://t.me/MatveyKostis"/>
+                    {contacts.map((name) => (
+                        <Contact key={name} name={name} />
+                    ))}
                 </section>
             </section>
 
