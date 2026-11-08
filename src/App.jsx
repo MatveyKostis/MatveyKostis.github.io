@@ -34,9 +34,9 @@ function App() {
                     <h3>projects</h3>
                     <Project
                         title="KomaruClicker"
-                        description="clicker on brython (i'll probably rewrite it later on react)"
+                        description="clicker (i'll probably rewrite it later on react)"
                         link="https://matveykostis.github.io/KomaruSite/"
-                        tech="brython, other html stuff"
+                        tech="html"
                     />
                     <Project
                         title="KomaruSite"
@@ -48,13 +48,7 @@ function App() {
                         title="RandomTimer"
                         description="original name was bad time but meh."
                         link="https://matveykostis.github.io/time/"
-                        tech="brython, other html stuff"
-                    />
-                    <Project
-                        title="Brython Easier"
-                        description="unsupported, btw, all other web project (not including this website) was written on this."
-                        link="https://github.com/MatveyKostis/brython_easier"
-                        tech="brython"
+                        tech="html"
                     />
                 </section>
 
