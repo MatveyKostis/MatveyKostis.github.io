@@ -10,7 +10,7 @@ function App() {
     return (
         <main>
             <header>
-                <h1>komaru <span>/ matvey</span></h1>
+                <h1>komaru</h1>
                 <nav>
                     <a href="#projects">projects</a>
                     <a href="#contact">contact</a>
@@ -46,7 +46,7 @@ function App() {
                 <div className="about-grid">
                     <img src={Avatar} alt="komaru's avatar: a cat holding a baguette" />
                     <p onClick={() => setEggs(eggs + 1)}>
-                        I'm Matvey, mostly known as komaru. I like making small
+                        I'm komaru. I like making small
                         things that run in a browser — games, timers, tools —
                         and I'd rather write Python than JavaScript, which is
                         why half my web stuff is Brython. When I'm not coding
@@ -66,12 +66,6 @@ function App() {
                     things I've shipped, most recent first.
                 </p>
                 <div className="projects-grid">
-                    <Project
-                        title="notesite + noteserver"
-                        description="notes app with accounts and a self-hosted server. the newest thing I'm building."
-                        link="https://github.com/MatveyKostis/notesite"
-                        tech="js, node, parcel"
-                    />
                     <Project
                         title="brython_easier"
                         description="a library that makes brython usable — localStorage, timers, the DOM, without breaking your brain. on PyPI."
@@ -98,6 +92,16 @@ function App() {
                         dead={false}
                     />
                 </div>
+                <h4 className="learning-sub">learning projects</h4>
+                <p className="learning-note">never use these, never, please</p>
+                <div className="projects-grid">
+                    <Project
+                        title="notesite + noteserver"
+                        description="notes app with accounts and a self-hosted server."
+                        link="https://github.com/MatveyKostis/notesite"
+                        tech="js, node, parcel"
+                    />
+                </div>
             </section>
 
             <section className="block contact" id="contact">
@@ -108,13 +112,13 @@ function App() {
                 </p>
                 <div className="contact-row">
                     <Contact name="github" url="https://github.com/MatveyKostis" />
-                    <Contact name="telegram" url="https://t.me/MatveyKostis" />
+                    <Contact name="telegram" url="https://t.me/matveykostis" />
                     <Contact name="discord" url="https://discord.com/users/828149186545188906" />
                 </div>
             </section>
 
             <footer>
-                <p>© {new Date().getFullYear()} matvey "komaru" kostis</p>
+                <p>© {new Date().getFullYear()} komaru</p>
                 <p>2+2=5</p>
                 <button
                     type="button"

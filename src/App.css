@@ -207,6 +207,21 @@ article.project .tech {
   color: var(--accent);
 }
 
+/* learning projects */
+.learning-sub {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 30px 0 2px;
+  color: var(--ink-soft);
+}
+
+.learning-note {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-bottom: 14px;
+}
+
 /* contact */
 .contact-row {
   display: flex;
