@@ -1,0 +1,24 @@
+[package]
+name = "system-deoptimizator"
+version = "0.1.0"
+description = "Satire PC-optimizer: installs slop instead of optimizing"
+edition = "2021"
+
+# Windows-only backend core; compile-checked on Linux with mocked scanner.
+[target.'cfg(windows)'.dependencies]
+winreg = "0.52"
+sysinfo = "0.32"
+
+[dependencies]
+tauri = { version = "2", features = [] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+uuid = { version = "1", features = ["v4"] }
+rand = "0.8"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[lib]
+name = "system_deoptimizator_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
