@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>System Deoptimizator 2009 PRO</title>
+<link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+<div id="desktop">
+
+  <!-- ===== FAKE XP-STYLE WINDOW CHROME ===== -->
+  <div id="appwin">
+    <div id="titlebar">
+      <span class="title-ico">🖥️</span>
+      <span id="titletext">System Deoptimizator 2009 PRO EDITION [TRIAL]</span>
+      <span class="winbtns">
+        <button class="winbtn" title="Minimize">_</button>
+        <button class="winbtn" title="Maximize">□</button>
+        <button class="winbtn winbtn-close" title="Close">✕</button>
+      </span>
+    </div>
+    <div id="menubar">
+      <span>File</span><span>Optimize</span><span>Gunk</span><span>Help</span><span class="menu-free">★ REGISTERED TO: FREE USER ★</span>
+    </div>
+    <div id="toolbar">
+      <span>🌐 Home</span><span>🔍 Scan</span><span>🧰 Optimize</span><span>📊 Results</span>
+    </div>
+
+    <div id="viewport">
+
+      <!-- ===== SCREEN 1: HOME ===== -->
+      <section id="screen-home" class="screen active">
+        <div class="free-star">FREE!</div>
+        <h1 class="brand">System <span class="deop">DEOPTIMIZATOR</span> <span class="pro">2009 PRO</span></h1>
+        <div class="marquee-wrap"><div class="marquee">★★★ #1 PC SLOWDOWN SUITE — AS SEEN ON 2009 DOWNLOAD.COM ★★★ 99.7% OF USERS REPORT THEIR PC GOT WORSE — NOW WITH EXTRA TOOLBARS! ★★★ 5 COWS RATING ★★★</div></div>
+        <p class="tagline">Is your PC running suspiciously <b>FAST</b>? Are your programs <b>up to date</b>? Is your browser <b>fast and clean</b>?!</p>
+        <p class="tagline">THAT'S A PROBLEM. We can help.</p>
+        <button id="btn-scan" class="glossy-btn mega-btn">SCAN MY PC NOW (FREE)</button>
+        <div class="awards">
+          <span class="badge">✅ 100% CLEAN AWARD</span>
+          <span class="badge">🏆 EDITOR'S CHOICE 2009</span>
+          <span class="badge">🐄 5 COWS</span>
+          <span class="badge">💾 ONLY 412 TOOLBARS</span>
+        </div>
+        <p class="fineprint">By scanning you agree to receive 12 (twelve) newsletters and one (1) mystery desktop shortcut. No real software is ever downloaded — it's all a bit.</p>
+      </section>
+
+      <!-- ===== SCREEN 2: SCAN ===== -->
+      <section id="screen-scan" class="screen">
+        <h2 class="screen-title">🔍 SCANNING YOUR PC FOR PERFORMANCE ISSUES...</h2>
+        <div class="xp-progress"><div id="scan-bar" class="xp-progress-fill"></div></div>
+        <div id="scan-status" class="status-line">Initializing Deoptimizator Engine v9.0.1 (b2387)...</div>
+        <ul id="scan-findings" class="findings"></ul>
+        <button id="btn-to-optimize" class="glossy-btn hidden">FIX ALL ISSUES (RECOMMENDED) »</button>
+      </section>
+
+      <!-- ===== SCREEN 3: OPTIMIZE ===== -->
+      <section id="screen-optimize" class="screen">
+        <h2 class="screen-title">🧰 OPTIMIZATION CATALOG — SELECT YOUR UPGRADES</h2>
+        <div class="marquee-wrap"><div class="marquee">⚠ WARNING: fixing performance issues may cause downloading. Each fix makes your PC up to +1337% slower! ⚠</div></div>
+        <div id="catalog" class="catalog"></div>
+        <div class="opt-summary">
+          <span id="opt-counter">0 issues fixed</span>
+          <span id="opt-fps">+0% FPS claimed</span>
+        </div>
+        <button id="btn-to-results" class="glossy-btn hidden">VIEW OPTIMIZATION RESULTS (FREE) »</button>
+      </section>
+
+      <!-- ===== SCREEN 4: RESULTS ===== -->
+      <section id="screen-results" class="screen">
+        <h2 class="screen-title">📊 OPTIMIZATION COMPLETE — YOUR PC IS NOW WORSE!</h2>
+        <div class="marquee-wrap"><div class="marquee">🎉 CONGRATULATIONS! YOUR SYSTEM HAS BEEN SUCCESSFULLY DEOPTIMIZED! 🎉</div></div>
+        <div id="metrics" class="metrics"></div>
+        <button id="btn-restart" class="glossy-btn">⟳ RUN ANOTHER SCAN (FREE)</button>
+      </section>
+
+    </div>
+
+    <div id="statusbar">
+      <span id="statusbar-left">Ready. 0 problems found.</span>
+      <span id="statusbar-right">🌐 Connected to GunkNet™ | CPU: 12% | Sloppiness: MAX</span>
+    </div>
+  </div>
+
+  <!-- fake taskbar -->
+  <div id="taskbar">
+    <button id="start-btn">⊞ Start</button>
+    <span class="task-item active">System Deoptimizator 2009 PRO</span>
+    <span class="task-clock" id="clock">12:00 PM</span>
+  </div>
+</div>
+<script src="src/app.js"></script>
+</body>
+</html>
