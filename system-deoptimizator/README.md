@@ -94,11 +94,9 @@ cargo tauri build
 produces the installers/bundles under `src-tauri/target/release/bundle/`.
 (Build on Windows for Windows targets.)
 
-Note: `src-tauri/icons/` currently contains only a 32x32 placeholder
-(`icon.png`), while `tauri.conf.json` references the full Tauri icon bundle
-(32x32, 128x128, @2x, `.icns`, `.ico`). Generate the rest first with
-`cargo tauri icon <source-image>` — until then builds fail at the icon step,
-which is cosmetic damage only and very much in the spirit of the project.
+The full icon bundle (32x32, 64x64, 128x128, @2x, `.icns`, `.ico`, Store
+logos, mobile icons) in `src-tauri/icons/` was generated from the 32x32
+placeholder with `cargo tauri icon` — builds no longer fail at the icon step.
 
 ## Project layout
 
